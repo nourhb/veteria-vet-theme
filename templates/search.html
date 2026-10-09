@@ -1,0 +1,30 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","align":"full","style":{"color":{"background":"#fdf8f0"},"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group alignfull has-background" style="background-color:#fdf8f0;padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
+	<!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontFamily":"var:preset|font-family|display","fontSize":"var:preset|font-size|xx-large"}},"textColor":"teal-deep"} -->
+	<h1 class="wp-block-heading has-text-align-center has-teal-deep-color has-text-color">Search results</h1>
+	<!-- /wp:heading -->
+	<!-- wp:search {"label":"Search","showLabel":false,"placeholder":"Search pet care articles…","buttonText":"Search","style":{"border":{"radius":"999px"},"spacing":{"margin":{"bottom":"var:preset|spacing|50"}}}} /-->
+	<!-- wp:query {"queryId":2,"query":{"perPage":9,"postType":"post","order":"desc","orderBy":"date","search":""}} -->
+	<div class="wp-block-query">
+		<!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
+		<!-- wp:group {"style":{"color":{"background":"#ffffff"},"border":{"radius":"18px"},"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}}}} -->
+		<div class="wp-block-group has-background" style="background-color:#ffffff;border-radius:18px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)">
+			<!-- wp:post-featured-image {"isLink":true,"style":{"border":{"radius":"12px"}}} /-->
+			<!-- wp:post-title {"isLink":true,"level":3,"style":{"typography":{"fontFamily":"var:preset|font-family|display","fontSize":"1.2rem"}},"textColor":"teal-deep"} /-->
+			<!-- wp:post-excerpt {"moreText":"Read more →","style":{"typography":{"fontSize":"0.95rem"}},"textColor":"slate"} /-->
+		</div>
+		<!-- /wp:group -->
+		<!-- /wp:post-template -->
+		<!-- wp:query-no-results -->
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center">Nothing found — try "vaccination", "dental" or "puppy". 🐾</p>
+		<!-- /wp:paragraph -->
+		<!-- /wp:query-no-results -->
+	</div>
+	<!-- /wp:query -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
